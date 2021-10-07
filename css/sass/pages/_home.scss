@@ -1,0 +1,191 @@
+/*
+    * media queries:
+    p {
+        @media #{$mobileMedia} {
+            color: red;
+        }
+        @media (min-width: $samllWidth) {
+            color: blue;
+        }
+        @media (min-width: $mediumWidth) {
+            color: pink;
+        }
+        @media #{$largeMedia} {
+            color: purple;
+        }
+    }
+    .btn {
+        @include mobileQuery {
+            background-color: red;
+        }
+        @include smallQuery {
+            background-color: blue;
+        }
+        @include mediumQuery {
+            background-color: yellow;
+        }
+        @include largeQuery {
+            background-color: purple;
+        }
+    }
+*/
+
+// slider section:
+.slider {
+    @include generatePadding($generalPadding, 0, $generalPadding, 0);
+    q {
+        display: block;
+        width: 80%;
+        margin: 0 auto 30px;
+        font: {
+            size: $defaultFont + 2;
+            style: italic;
+        }
+        line-height: 1.5;
+        letter-spacing: 1px;
+        text-align: center;
+        color: #515151;
+    }
+    .bullets {
+        text-align: center;
+        margin: 30px 0 0;
+        li {
+            display: inline-block;
+            margin: 0 1px;
+            width: 15px;
+            height: 15px;
+            background-color: $greyColor;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            @include transitionGenerator(all);
+            cursor: pointer;
+            &.active,
+            &:hover {
+                background-color: $whiteColor;
+                border-color: $blackColor;
+            }
+        }
+    }
+}
+
+// services section:
+.services {
+    @include generatePadding(0, 0, $generalPadding, 0);
+    .row {
+        .service-box {
+            &:not(:last-of-type) {
+                margin-bottom: 2rem;
+            }
+            @include mediumQuery {
+                float: $float-left;
+                width: ((100% - 4) / 3);
+                text-align: $text-left;
+                &:not(:last-of-type) {
+                    margin-right: 2%;
+                }
+            }
+            .service-title {
+                i {
+                    font-size: 1.3rem;
+                    color: #555;
+                    @include mobileQuery {
+                        display: block;
+                        margin-bottom: 15px;
+                    }
+                }
+                span {
+                    font: {
+                        size: $defaultFont + 4;
+                        weight: 400;
+                    }
+                    letter-spacing: 1px;
+                    color: #333;
+                }
+            }
+            .service-desc {
+                font-size: $defaultFont - 2;
+                line-height: 1.7;
+                letter-spacing: 1px;
+                color: #777;
+                margin: 10px 0;
+            }
+            .service-link {
+                letter-spacing: 1px;
+                color: $mainColor;
+            }
+        }
+    }
+}
+
+// our-players section:
+.our-players {
+    @include generatePadding(0, 0, $generalPadding, 0);
+    .row {
+        .player-box {
+            &:not(:last-of-type) {
+                margin-bottom: 2rem;
+            }
+            @include smallQuery {
+                float: $float-left;
+                width: ((100% - 8) / 2);
+                text-align: $text-left;
+                margin: 0 2% 2rem;
+            }
+            @include mediumQuery {
+                width: ((100% - 12) / 3);
+            }
+            @include largeQuery {
+                width: ((100% - 16) / 4);
+                text-align: $text-left;
+            }
+            img {
+                height: 200px;
+            }
+            .player-title {
+                margin-top: 10px;
+                font: {
+                    size: $defaultFont;
+                    weight: normal;
+                }
+                letter-spacing: 1px;
+                color: #333;
+                span {
+                    font-weight: bold;
+                }
+            }
+            .player-desc {
+                font-size: $defaultFont - 2;
+                line-height: 1.7;
+                letter-spacing: 1px;
+                color: #777;
+                margin: 10px 0;
+            }
+            .player-link {
+                letter-spacing: 1px;
+                color: $mainColor;
+            }
+        }
+    }
+}
+
+// lorem-ipsum:
+.lorem-ipsum {
+    @include generatePadding(0, 0, $generalPadding, 0);
+    .row {
+        .lorem-box {
+            float: $float-left;
+            width: ((100% - 12) / 3);
+            margin: 0 2%;
+            @include mobileQuery {
+                float: none;
+                width: 100%;
+                &:not(:last-of-type) {
+                    margin-bottom: 2rem;
+                }
+            }
+            img {
+                height: 200px;
+            }
+        }
+    }
+}

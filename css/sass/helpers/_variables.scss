@@ -1,0 +1,35 @@
+// media queries:
+$mobileWidth: 576px;
+$samllWidth: 768px;
+$mediumWidth: 992px;
+$largeWidth: 1200px;
+$mobileMedia: (
+    max-width: $mobileWidth,
+);
+$samllMedia: (
+    min-width: $samllWidth,
+);
+$mediumMedia: (
+    min-width: $mediumWidth,
+);
+$largeMedia: (
+    min-width: $largeWidth,
+);
+
+// colors:
+$mainColor: #e2494c;
+$greyColor: #c5c5c5;
+$whiteColor: #ffffff;
+$blackColor: #000000;
+
+// direction:
+$float-left: left;
+$float-right: right;
+$text-right: right;
+$text-left: left;
+$text-right: right;
+
+// fix values:
+$radius: 0.5rem;
+$defaultFont: 16px;
+$generalPadding: 50px;

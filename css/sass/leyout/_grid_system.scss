@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    @include prefixer(box-sizing, border-box, webkit moz);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    padding: {
+        left: 15px;
+        right: 15px;
+    }
+    @include smallQuery {
+        width: 750px;
+    }
+    @include mediumQuery {
+        width: 970px;
+    }
+    @include largeQuery {
+        width: 1170px;
+    }
+}
+
+.clearFix {
+    clear: both;
+}
+
+.text-center-xs {
+    text-align: center;
+}

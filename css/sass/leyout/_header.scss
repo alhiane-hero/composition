@@ -1,0 +1,82 @@
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid $greyColor;
+    .logo {
+        @include generatePosition(relative);
+        color: $greyColor;
+        letter-spacing: 1px;
+        text-align: center;
+        @include mobileQuery {
+            text-align: $text-left;
+        }
+        @include smallQuery {
+            float: none;
+            width: 100%;
+        }
+        @include mediumQuery {
+            float: $float-left;
+            width: 30%;
+            text-align: $text-left;
+        }
+        h1 {
+            font-weight: 400;
+        }
+        p {
+            font-size: $defaultFont - 2;
+        }
+        .toggler {
+            @include generatePosition(absolute, 0, 50%, 15px, 0, none);
+            transform: translateY(-50%);
+            display: none;
+            @include mobileQuery {
+                display: block;
+            }
+        }
+    }
+    .navbar {
+        background-color: $mainColor;
+        overflow: hidden;
+        @include transitionGenerator(all);
+        @include borderRadius($radius, $radius, $radius, $radius);
+        margin-top: 1.5rem;
+        @include mobileQuery {
+            height: 0;
+            visibility: hidden;
+            @include borderRadius(0, 0, 0, 0);
+            margin-top: 0;
+        }
+        @include smallQuery {
+            float: none;
+            width: 100%;
+        }
+        @include mediumQuery {
+            float: $float-left;
+            width: 70%;
+            margin-top: 0;
+        }
+        li {
+            float: $float-left;
+            width: 20%;
+            @include mobileQuery {
+                float: none;
+                width: 100%;
+            }
+            font-size: $defaultFont;
+            text-align: center;
+            a {
+                display: block;
+                padding: 20px 10px;
+                color: $whiteColor;
+                @include transitionGenerator(color);
+                &:hover {
+                    color: $greyColor;
+                }
+            }
+        }
+        &.show {
+            margin-top: 1.5rem;
+            height: 295px;
+            visibility: visible;
+        }
+    }
+}

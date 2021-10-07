@@ -1,0 +1,147 @@
+footer {
+    @include generatePadding($generalPadding, 0, 0, 0);
+    background-color: #eee;
+    .row {
+        overflow: hidden;
+        .general-title {
+            font: {
+                size: $defaultFont + 2;
+                weight: normal;
+            }
+            color: #444;
+            margin-bottom: 20px;
+        }
+        .latest-blog,
+        .info,
+        .contact {
+            overflow: hidden;
+            float: $float-left;
+        }
+        .latest-blog {
+            margin-bottom: 2rem;
+            @include smallQuery {
+                width: 100%;
+            }
+            @include mediumQuery {
+                width: 50%;
+            }
+            .img-box {
+                overflow: hidden;
+                &:not(:last-of-type) {
+                    margin-bottom: 15px;
+                }
+                img {
+                    float: $float-left;
+                    width: 150px;
+                    height: 150px;
+                    @include mobileQuery {
+                        float: none;
+                        width: 100%;
+                    }
+                }
+                .text {
+                    float: $float-left;
+                    width: calc(100% - 180px);
+                    margin: 0 15px;
+                    @include mobileQuery {
+                        float: none;
+                        width: 100%;
+                        margin: 0 0;
+                    }
+                    h3 {
+                        font: {
+                            size: $defaultFont + 2;
+                            weight: normal;
+                        }
+                        color: $mainColor;
+                        margin: 10px 0;
+                    }
+                    p {
+                        font-size: 0.9rem;
+                        color: #777;
+                        line-height: 1.7;
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+        .info {
+            margin-bottom: 2rem;
+            @include smallQuery {
+                width: 50%;
+            }
+            @include mediumQuery {
+                width: 25%;
+            }
+            ul {
+                color: #777;
+                font-size: 0.9rem;
+                line-height: 1.8;
+                li {
+                    &.email {
+                        span {
+                            color: $mainColor;
+                        }
+                    }
+                }
+                h4 {
+                    margin-top: 15px;
+                }
+            }
+        }
+        .contact {
+            @include smallQuery {
+                width: 50%;
+            }
+            @include mediumQuery {
+                width: 25%;
+            }
+            input[type="text"],
+            input[type="email"],
+            textarea {
+                width: 100%;
+                border: none;
+                margin-bottom: 15px;
+                padding: 0.7rem;
+                border-radius: 0.5rem;
+                &:focus {
+                    outline: none;
+                }
+            }
+            textarea {
+                height: 120px;
+                resize: none;
+            }
+        }
+    }
+    .copyRight {
+        @include generatePadding($generalPadding - 20, 0, $generalPadding - 20, 0);
+        margin-top: $generalPadding - 10;
+        border-top: 1px solid $greyColor;
+        .text {
+            float: $float-left;
+            width: 50%;
+            @include mobileQuery {
+                float: none;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+        }
+        .rights {
+            float: $float-left;
+            width: 50%;
+            text-align: $text-right;
+            @include mobileQuery {
+                float: none;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .text,
+        .rights {
+            font-size: 0.9rem;
+            color: #777;
+        }
+    }
+}

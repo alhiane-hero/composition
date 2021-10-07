@@ -1,0 +1,22 @@
+body {
+    background-color: #f6f6f6;
+    font: {
+        family: Tahoma;
+        size: 16px;
+    }
+}
+
+ul,
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.img-fluid {
+    width: 100%;
+    height: 400px;
+}

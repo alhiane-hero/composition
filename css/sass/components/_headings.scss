@@ -1,0 +1,25 @@
+.heading-box {
+    margin-bottom: $generalPadding - 10;
+    @include generatePosition(relative);
+    h2 {
+        padding: 0.5rem 1.5rem;
+        width: fit-content;
+        margin: 0 auto;
+        background-color: $mainColor;
+        border-radius: $radius;
+        font: {
+            size: $defaultFont + 2;
+            weight: 400;
+        }
+        letter-spacing: 1px;
+        color: $whiteColor;
+        &:before {
+            content: "";
+            @include generatePosition(absolute, -1, 50%);
+            transform: translateY(-50%);
+            width: 100%;
+            height: 1px;
+            background-color: $greyColor;
+        }
+    }
+}

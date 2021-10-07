@@ -1,0 +1,79 @@
+@media (max-width: 576px) {
+  header .logo {
+    text-align: right;
+  }
+}
+
+@media (min-width: 992px) {
+  header .logo {
+    float: right;
+    text-align: right;
+  }
+}
+
+header .logo .toggler {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: auto;
+  bottom: 0;
+  left: 15px;
+}
+
+@media (min-width: 992px) {
+  header .navbar {
+    float: right;
+  }
+}
+
+header .navbar li {
+  float: right;
+}
+
+@media (min-width: 992px) {
+  .services .row .service-box {
+    float: right;
+    text-align: right;
+  }
+}
+
+@media (min-width: 768px) {
+  .our-players .row .player-box {
+    float: right;
+    text-align: right;
+  }
+}
+
+@media (min-width: 1200px) {
+  .our-players .row .player-box {
+    text-align: right;
+  }
+}
+
+.lorem-ipsum .row .lorem-box {
+  float: right;
+}
+
+footer .row .latest-blog,
+footer .row .info,
+footer .row .contact {
+  float: right;
+}
+
+footer .row .latest-blog .img-box img {
+  float: right;
+}
+
+footer .row .latest-blog .img-box .text {
+  float: right;
+}
+
+footer .copyRight .text {
+  float: right;
+}
+
+footer .copyRight .rights {
+  float: right;
+  text-align: left;
+}
+/*# sourceMappingURL=homepage_rtl.css.map */

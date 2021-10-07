@@ -1,0 +1,19 @@
+.btn {
+    padding: 0.75rem 1.75rem;
+    background-color: purple + red;
+    border: none;
+    border-radius: $radius;
+    color: $whiteColor;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    @include generateTransition(opacity 0.5s ease-in-out);
+    cursor: pointer;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.toggler {
+    font-size: 1.5rem;
+    color: $greyColor;
+}
